@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cárie Dentária</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(45deg, #1e3c72, #2a5298);
+      color: white;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .container {
+      display: flex;
+      flex: 1;
+    }
+
+    nav {
+      background-color: #003366;
+      padding-top: 60px;
+      min-width: 200px;
+      height: 100vh;
+      position: sticky;
+      top: 0;
+    }
+
+    nav a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #ffcc00;
+      color: #000;
+    }
+
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.7);
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 36px;
+      font-weight: bold;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    main {
+      padding: 40px 20px;
+      flex: 1;
+    }
+
+    section {
+      background-color: rgba(255, 255, 255, 0.1);
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s ease;
+    }
+
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      color: #ffcc00;
+      margin-top: 0;
+    }
+
+    img {
+      width: 100%;
+      max-width: 400px;
+      margin: 20px auto;
+      display: block;
+      border-radius: 10px;
+      transition: transform 0.5s;
+    }
+
+    img:hover {
+      transform: scale(1.1);
+    }
+
+    footer {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      nav {
+        width: 100%;
+        height: auto;
+        position: static;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      nav a {
+        flex: 1 1 50%;
+        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <nav>
+      <a href="#oque">O que é</a>
+      <a href="#causas">Causas</a>
+      <a href="#prevencao">Prevenção</a>
+      <a href="#tratamento">Tratamento</a>
+      <a href="#grupo">Grupo</a>
+    </nav>
+
+    <div class="content">
+      <header>
+        Cárie Dentária - Prevenção e Tratamento
+      </header>
+
+      <main>
+        <section id="oque">
+          <h2>O que é Cárie Dentária?</h2>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Caries.JPG/800px-Caries.JPG" alt="Imagem de dente com cárie">
+          <p>
+            A cárie dentária é uma doença causada pela destruição do esmalte dental e, em estágios mais avançados, pode atingir a dentina e a polpa do dente. Ela ocorre quando bactérias presentes na boca fermentam restos de alimentos, produzindo ácidos que corroem os dentes.
+          </p>
+        </section>
+
+        <section id="causas">
+          <h2>Causas</h2>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Sugar_Damage_Teeth.svg/640px-Sugar_Damage_Teeth.svg.png" alt="Açúcar prejudicando os dentes">
+          <p>
+            As principais causas da cárie dentária incluem a má higiene bucal, consumo excessivo de alimentos açucarados, acúmulo de placa bacteriana e a falta de visitas regulares ao dentista.
+          </p>
+        </section>
+
+        <section id="prevencao">
+          <h2>Prevenção</h2>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Toothbrush_cup.jpg/640px-Toothbrush_cup.jpg" alt="Escova de dentes para prevenção">
+          <p>
+            A melhor forma de prevenir a cárie é manter uma boa higiene bucal: escovar os dentes pelo menos três vezes ao dia, usar fio dental diariamente, evitar o consumo exagerado de doces e bebidas açucaradas e fazer consultas periódicas ao dentista.
+          </p>
+        </section>
+
+        <section id="tratamento">
+          <h2>Tratamento</h2>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Composite_resin_restoration_1.jpg/640px-Composite_resin_restoration_1.jpg" alt="Tratamento de dente com restauração">
+          <p>
+            O tratamento depende do estágio da cárie. Pode incluir aplicação de flúor, restaurações (obturações), tratamento de canal ou, em casos muito graves, a extração do dente afetado.
+          </p>
+        </section>
+
+        <section id="grupo">
+          <h2>Componentes do Grupo</h2>
+          <p>André Luiz</p>
+          <p>João Vitor</p>
+          <p>Felipe Oliveira</p>
+          <p>Luis Roberto</p>
+          <p>Carlos Daniel</p>
+          <p><strong>Turno:</strong> Matutino</p>
+          <p><strong>Turma:</strong> 2° C</p>
+        </section>
+      </main>
+
+      <footer>
+        Trabalho Escolar - Cárie Dentária | 2025
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
+
+    document.querySelectorAll('section').forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
